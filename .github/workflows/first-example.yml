@@ -16,3 +16,15 @@ jobs:
             
             - name: Generate ASCII Artwork
               run: cowsay -f dragon "Run for cover, I am dragon >> dragon.txt"
+
+            - name: Install Cowsay program
+              run: sudo apt-get install cowsay -y
+
+            - name: Test File Exists
+              run: grep -i "dragon" dragon.txt
+
+            - name: Read file
+              run: cat dragon.txt
+
+            - name: list repo files
+              run: ls -ltra
